@@ -7,10 +7,10 @@ const server = express();
 var mysql = require('mysql');
 
 var con = mysql.createConnection({
-    host: "127.0.0.1",
-    user: "root",
-    password: "",
-    database: "webapi"
+    host: "k2pdcy98kpcsweia.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    user: "w4n7jdy917qcm2a5",
+    password: "djljfp9wxwmgmgq6",
+    database: "d96h9x0hb8uzah21"
 });
 
 var dataArray = [];
@@ -46,7 +46,7 @@ server.get('/history', (req, res) => {
                 getData = dataKeyArray;
                 console.log(getData);
                 res.render('history.hbs');
-            }, 200)
+            }, 500)
         });
 })
 
@@ -101,7 +101,7 @@ server.post('/result', (req, res) => {
             getData = dataKeyArray;
             console.log(getData);
             res.render('result.hbs');
-        }, 200)
+        }, 500)
         // insertDB(dataArray);
     });
 });
