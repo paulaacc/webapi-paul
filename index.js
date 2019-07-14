@@ -106,8 +106,8 @@ server.post('/result', (req, res) => {
     });
 });
 
-server.listen(5000, () => {
-    console.log('hello');
+server.listen(process.env.PORT || 4000, function(){
+    console.log('Your node js server is running');
 });
 
 function selectAllFromDB() {
