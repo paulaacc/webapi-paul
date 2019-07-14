@@ -1,0 +1,52 @@
+{{> header}}
+{{> navigation}}
+
+
+<div class="jumbotron text-center">
+    <h1>History</h1>
+    <p>History of all movies searched before</p>
+</div>
+
+<form action="deleteAll" method="post" style="text-align: center">
+    <button class="btn btn-danger" type="submit" name="deleteAll" value="DELETE">DELETE ALL RECORDS</button>
+</form>
+
+<table class="table table-striped">
+    <tr>
+        <th>Movie Title</th>
+        <th>Released</th>
+        <th>Rated</th>
+        <th>Genre</th>
+        <th>IMDB Rating</th>
+        <th>IMDB ID</th>
+    </tr>
+    {{#list items}}
+        {{#if title}}
+            <tr>
+                <td>
+                    <img width="150" height="225" src="{{image}}">
+                </td>
+                <td>
+                    {{title}}
+                </td>
+                <td>
+                    {{released}}
+                </td>
+                <td>
+                    {{rated}}
+                </td>
+                <td>
+                    {{genre}}
+                </td>
+                <td>
+                    {{rating}}
+                </td>
+                <td>
+                    {{id}}
+                </td>
+            </tr>
+        {{/if}}
+    {{/list}}
+</table>
+
+{{> footer}}
